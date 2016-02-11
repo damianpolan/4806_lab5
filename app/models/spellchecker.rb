@@ -28,10 +28,11 @@ class Spellchecker
   end
 
   def train!(features)
-    # @dictionary = Hash.new(0)
-    # features.each do |f|
-    #   @dictionary[f] += 1
-    # end
+    # The fix!
+    @dictionary = Hash.new(0)
+    features.each do |f|
+      @dictionary[f] += 1
+    end
   end
   
   def edits1(word)
